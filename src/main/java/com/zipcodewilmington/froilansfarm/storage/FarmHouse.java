@@ -8,4 +8,14 @@ import java.util.List;
 
 public class FarmHouse extends Storage<Person>{
 
+    Farmer getFarmer(String name){
+
+        Farmer farmer = null;
+        int index = items.indexOf(new Person(name));
+        Person person = items.get(index);
+        if(person instanceof Farmer)
+            farmer =  (Farmer)person;
+        return farmer;
+    }
+
 }

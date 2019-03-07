@@ -72,7 +72,7 @@ public class Farm {
             stables.get(i%numberOfStables).add(animalSupplier.get());
         }
     }
-    public void addFarmerToFarm(Person person) {
+    public void addFarmerToFarmHouse(Person person) {
          farmHouse.add(person);
     }
 

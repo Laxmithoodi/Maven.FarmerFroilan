@@ -11,7 +11,7 @@
 	* `NoiseMaker` can `makeNoise`
 	* `Animal` is a `NoiseMaker` and `Eater`
 		* `Horse` is an `Animal` and `Rideable`
-		* `Chicken` is an `Animal` and a `Produce` which `yield` an `EdibleEgg` if `hasBeenFertilized` flag is `false`.
+`		* `Chicken` is an `Animal` and a `Produce` which `yield` an `EdibleEgg` if `hasBeenFertilized` flag is `false`.
 
 	* `Rider` can `mount` and `dismount` a `Rideable` object.
 	* `Botanist` can `plant` a `Crop` in a `CropRow`.
