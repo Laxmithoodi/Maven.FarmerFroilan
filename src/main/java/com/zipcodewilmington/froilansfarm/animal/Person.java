@@ -16,7 +16,8 @@ public class Person implements NoiseMaker, Eater {
 
     }
 
-    public void makeNoise() {
+    public String makeNoise() {
+        return "shout!";
 
     }
 }

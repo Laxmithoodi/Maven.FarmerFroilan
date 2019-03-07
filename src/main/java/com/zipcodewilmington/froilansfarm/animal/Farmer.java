@@ -8,6 +8,8 @@ import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
 import com.zipcodewilmington.froilansfarm.storage.Farm;
 
+import java.util.function.Supplier;
+
 public class Farmer extends Person implements Rider, Botanist {
 
     public Farmer(String name) {
@@ -26,7 +28,9 @@ public class Farmer extends Person implements Rider, Botanist {
 
     }
 
-    public void plant(Crop crop, CropRow cropRow) {
-
+    public <T extends Crop> void plant(Supplier<T> cropSupplier, int numberOfCrops, CropRow cropRow) {
+        cropRow.addCropRow(cropSupplier, numberOfCrops);
     }
+
+
 }
