@@ -32,7 +32,7 @@ public class FroilanFarm {
     public FroilanFarm() {
 
         farm = new Farm();
-        addFieldToFarm(farm);
+        //addFieldToFarm(farm);
         addChickenCoopToFarm(farm);
         addStablesToFarm(farm);
         addVehiclesToFarm(farm);
@@ -52,7 +52,7 @@ public class FroilanFarm {
     }
 
     private void addFieldToFarm(Farm farm) {
-        Field field = new Field();
+
 
         farm.CreateCropRowInField(CornStalk::new, 5);
         farm.CreateCropRowInField(TomatoPlant::new, 5);
