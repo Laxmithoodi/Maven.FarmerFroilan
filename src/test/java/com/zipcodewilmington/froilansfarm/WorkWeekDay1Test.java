@@ -1,18 +1,17 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.animal.Farmer;
 import org.junit.Test;
 
 public class WorkWeekDay1Test {
-    FroilanFarm froilanFarm;
+    Plot plot;
     public WorkWeekDay1Test(){
-        froilanFarm = new FroilanFarm();
+        plot = new Plot();
     }
     @Test
     public void morningTest(){
      }
     public void RideHorse(){
 
-        froilanFarm.rideHorse();
+        plot.rideHorse();
     }
 }
