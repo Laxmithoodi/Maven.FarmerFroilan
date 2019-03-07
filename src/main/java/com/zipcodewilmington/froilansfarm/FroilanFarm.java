@@ -16,7 +16,6 @@ import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
 
 import java.util.List;
-import java.util.function.Supplier;
 
 /**
  * Created by leon on 2/26/18.
@@ -48,8 +47,8 @@ public class FroilanFarm {
     }
 
     private void addFarmHouseToFarm(Farm farm) {
-        farm.addFarmerToFarm(new Farmer("frolian"));
-        farm.addFarmerToFarm(new Farmer("froilanda"));
+        farm.addFarmerToFarmHouse(new Farmer("frolian"));
+        farm.addFarmerToFarmHouse(new Farmer("froilanda"));
     }
 
     private void addFieldToFarm(Farm farm) {
