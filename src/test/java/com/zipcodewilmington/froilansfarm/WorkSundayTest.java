@@ -18,48 +18,54 @@ public class WorkSundayTest {
 //Farmer extends Person
     @Test
 
-        public void testCropRow() {
-        String name = "Froilan";
+        public void testAddTomatoCropRow() {
+      //  String name = "Froilan";
 
         FroilanFarm froilanFarm = new FroilanFarm();
-        List<Person> farmer = froilanFarm.getFarm().getFarmHouse().getItems();
-        Person person = new Person(name);
-           farmer.add(person);
+        Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("Froilan");
+        CropRow cropRow= new CropRow();
+        farmer.plant(TomatoPlant::new, 5, cropRow);
+        froilanFarm.getFarm().getField().add(cropRow);
 
-            CropRow cropRow = new CropRow();
-
-
-            cropRow.addCropRow(TomatoPlant::new, 5);
-            int countOfCrops = cropRow.getItems().size();
-             Assert.assertEquals(countOfCrops, 5);
-        System.out.println("CropRow1:" + countOfCrops);
 
     }
-
     @Test
+    public void testAddCornCropRow() {
+        //  String name = "Froilan";
 
-    public void testCropRow2() {
-        CropRow cropRow = new CropRow();
-
-
-        cropRow.addCropRow(CornStalk::new, 8);
-        int countOfCrops = cropRow.getItems().size();
-        Assert.assertEquals(countOfCrops, 8);
-        System.out.println("CropRow2:" + countOfCrops);
-
-    }
-
-    @Test
-
-    public void testCropRow3() {
-        CropRow cropRow = new CropRow();
-
-        cropRow.addCropRow(GenericVegetation::new, 10);
-        int countOfCrops = cropRow.getItems().size();
-        Assert.assertEquals(countOfCrops, 10);
-
-        System.out.println("CropRow3:" + countOfCrops);
+        FroilanFarm froilanFarm = new FroilanFarm();
+        Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("Froilan");
+        CropRow cropRow= new CropRow();
+        farmer.plant(CornStalk::new, 5, cropRow);
+        froilanFarm.getFarm().getField().add(cropRow);
 
     }
+
+//
+//    @Test
+//
+//    public void testCropRow2() {
+//        CropRow cropRow = new CropRow();
+//
+//
+//        cropRow.addCropRow(CornStalk::new, 8);
+//        int countOfCrops = cropRow.getItems().size();
+//        Assert.assertEquals(countOfCrops, 8);
+//        System.out.println("CropRow2:" + countOfCrops);
+//
+//    }
+//
+//    @Test
+//
+//    public void testCropRow3() {
+//        CropRow cropRow = new CropRow();
+//
+//        cropRow.addCropRow(GenericVegetation::new, 10);
+//        int countOfCrops = cropRow.getItems().size();
+//        Assert.assertEquals(countOfCrops, 10);
+//
+//        System.out.println("CropRow3:" + countOfCrops);
+//
+//    }
 
 }

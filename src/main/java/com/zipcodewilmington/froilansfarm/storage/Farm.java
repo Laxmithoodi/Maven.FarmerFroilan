@@ -44,7 +44,7 @@ public class Farm {
     public <T extends Crop> void CreateCropRowInField(Supplier<T> cropSupplier, int numberOfCrops) {
         CropRow cropRow = new CropRow();
         cropRow.addCropRow(cropSupplier, numberOfCrops);
-        field.addCropRow(cropRow);
+      //  field.addCropRow(cropRow);
     }
 
     public <H extends ChickenCoop, A extends Chicken>
@@ -110,5 +110,9 @@ public class Farm {
             horses.addAll(stable.getItems());
         }
         return horses;
+    }
+
+    public Field getField() {
+        return field;
     }
 }
