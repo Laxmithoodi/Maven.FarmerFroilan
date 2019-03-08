@@ -30,7 +30,7 @@ public class Farm {
     List<Vehicle> vehicles = new ArrayList<Vehicle>();
 
     public Farm(){
-        FarmHouse farmHouse = new FarmHouse();
+        farmHouse = new FarmHouse();
         field = new Field();
     }
 
@@ -121,6 +121,8 @@ public class Farm {
     public Field getField() {
         return field;
     }
+
+
     public CropDuster getCropDuster(){
 
         Optional<Vehicle> filteredVehicle = vehicles.stream()
@@ -129,5 +131,9 @@ public class Farm {
 
         return (CropDuster)filteredVehicle.orElse(null);
 
+    }
+
+    public List<CropRow> getCropRows() {
+        return null;
     }
 }

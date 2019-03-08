@@ -6,6 +6,7 @@ import com.zipcodewilmington.froilansfarm.edible.Edible;
 import java.util.function.Supplier;
 
 public abstract class Crop<T extends Edible> implements Produce {
+    private boolean hasBeenFertilized;
     Supplier<T> edibleSupplier;
 
     public Crop(Supplier<T> edibleSupplier){
@@ -13,6 +14,10 @@ public abstract class Crop<T extends Edible> implements Produce {
     }
 
     public Edible yield() {
-        return (Edible) edibleSupplier.get();
+        Edible edible = null;
+        if( hasBeenFertilized){
+            edible =  (Edible) edibleSupplier.get();
+        }
+        return edible;
     }
 }
