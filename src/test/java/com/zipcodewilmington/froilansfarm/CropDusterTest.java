@@ -12,7 +12,7 @@ import java.util.List;
 
 public class CropDusterTest {
 
-    FroilanFarm froilanFarm = new FroilanFarm();
+    Plot froilanFarm = new Plot();
     CropDuster cropduster = new CropDuster();
 
 

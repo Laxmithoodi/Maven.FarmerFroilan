@@ -1,26 +1,20 @@
 package com.zipcodewilmington.froilansfarm.storage;
 
 import com.zipcodewilmington.froilansfarm.animal.Chicken;
-import com.zipcodewilmington.froilansfarm.animal.Farmer;
 import com.zipcodewilmington.froilansfarm.animal.Horse;
 import com.zipcodewilmington.froilansfarm.animal.Person;
-import com.zipcodewilmington.froilansfarm.animal.interfaces.Animal;
-import com.zipcodewilmington.froilansfarm.crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
-import com.zipcodewilmington.froilansfarm.edible.Edible;
 import com.zipcodewilmington.froilansfarm.storage.field.CropRow;
 import com.zipcodewilmington.froilansfarm.storage.field.Field;
 import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicle.interfaces.Aircraft;
-import com.zipcodewilmington.froilansfarm.vehicle.interfaces.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.vehicle.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.vehicle.interfaces.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Consumer;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 public class Farm {
     Field field;
@@ -63,7 +57,7 @@ public class Farm {
             addChickenCoop(chickenCoop);
         }
         for (int i = 0; i < numberOfChickens; i++) {
-                chickenCoops.get(i%numberOfCoops).add(animalSupplier.get());
+            chickenCoops.get(i%numberOfCoops).add(animalSupplier.get());
         }
     }
 
@@ -122,7 +116,6 @@ public class Farm {
         return field;
     }
 
-
     public CropDuster getCropDuster(){
 
         Optional<Vehicle> filteredVehicle = vehicles.stream()
@@ -133,7 +126,7 @@ public class Farm {
 
     }
 
-    public List<CropRow> getCropRows() {
-        return null;
+    public List<CropRow> getCropRows(){
+        return field.getItems();
     }
 }

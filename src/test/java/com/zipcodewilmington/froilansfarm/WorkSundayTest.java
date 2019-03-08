@@ -2,7 +2,6 @@ package com.zipcodewilmington.froilansfarm;
 
 
 import com.zipcodewilmington.froilansfarm.animal.Farmer;
-import com.zipcodewilmington.froilansfarm.animal.Person;
 import com.zipcodewilmington.froilansfarm.crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.crop.GenericVegetation;
 import com.zipcodewilmington.froilansfarm.crop.TomatoPlant;
@@ -14,14 +13,20 @@ import org.junit.Test;
 
 
 public class WorkSundayTest {
+    Plot froilanFarm;
+    Farmer  frolianFarmer;
+    Farmer froilandaFarmer;
 
+    public WorkSundayTest(){
+        froilanFarm = new Plot();
+        frolianFarmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
+
+
+    }
 
     @Test
-
-        public void testAddTomatoCropRow() {
-
-
-        FroilanFarm froilanFarm = new FroilanFarm();
+    public void testAddTomatoCropRow() {
+        Plot froilanFarm = new Plot();
         Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
         CropRow cropRow= new CropRow();
         farmer.plant(TomatoPlant::new, 5, cropRow);
@@ -35,8 +40,7 @@ public class WorkSundayTest {
     @Test
     public void testAddCornCropRow() {
 
-
-        FroilanFarm froilanFarm = new FroilanFarm();
+        Plot froilanFarm = new Plot();
         Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
         CropRow cropRow= new CropRow();
         farmer.plant(CornStalk::new, 5, cropRow);
@@ -50,8 +54,7 @@ public class WorkSundayTest {
     @Test
     public void testAddGenericVegetationCropRow() {
 
-
-        FroilanFarm froilanFarm = new FroilanFarm();
+        Plot froilanFarm = new Plot();
         Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
         CropRow cropRow= new CropRow();
         farmer.plant(GenericVegetation::new, 5, cropRow);

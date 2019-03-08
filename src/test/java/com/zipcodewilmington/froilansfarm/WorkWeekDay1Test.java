@@ -8,19 +8,19 @@ import org.junit.Test;
 import java.util.List;
 
 public class WorkWeekDay1Test {
-    FroilanFarm froilanFarm;
+    Plot plot;
     public WorkWeekDay1Test(){
-        froilanFarm = new FroilanFarm();
+        plot = new Plot();
     }
     @Test
     public void morningTest(){
      }
 
     public void RideHorse(){
-        List<Person> farmerList = froilanFarm.getFarm().getFarmHouse().getItems();
+        List<Person> farmerList = plot.getFarm().getFarmHouse().getItems();
         farmerList.forEach(person -> {
             if(person instanceof Farmer) {
-                for (Horse horse : froilanFarm.getFarm().getHorses()) {
+                for (Horse horse : plot.getFarm().getHorses()) {
                     ((Farmer) person).mount(horse);
                     ((Farmer) person).dismount(horse);
                 }
