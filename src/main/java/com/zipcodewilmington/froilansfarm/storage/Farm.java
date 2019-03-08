@@ -27,7 +27,7 @@ public class Farm {
     List<Vehicle> vehicles = new ArrayList<Vehicle>();
 
     public Farm(){
-        FarmHouse farmHouse = new FarmHouse();
+        farmHouse = new FarmHouse();
         field= new Field();
     }
     public void addChickenCoop(ChickenCoop chickenCoop) {
@@ -45,7 +45,7 @@ public class Farm {
     public <T extends Crop> void CreateCropRowInField(Supplier<T> cropSupplier, int numberOfCrops) {
         CropRow cropRow = new CropRow();
         cropRow.addCropRow(cropSupplier, numberOfCrops);
-      //  field.addCropRow(cropRow);
+       field.add(cropRow);
     }
 
     public <H extends ChickenCoop, A extends Chicken>

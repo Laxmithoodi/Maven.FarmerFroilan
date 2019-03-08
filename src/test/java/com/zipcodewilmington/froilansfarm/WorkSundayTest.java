@@ -10,34 +10,55 @@ import com.zipcodewilmington.froilansfarm.storage.field.CropRow;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.List;
+
 
 
 public class WorkSundayTest {
 
-//Farmer extends Person
+
     @Test
 
         public void testAddTomatoCropRow() {
-      //  String name = "Froilan";
+
 
         FroilanFarm froilanFarm = new FroilanFarm();
-        Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("Froilan");
+        Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
         CropRow cropRow= new CropRow();
         farmer.plant(TomatoPlant::new, 5, cropRow);
         froilanFarm.getFarm().getField().add(cropRow);
 
-
+        int actual = cropRow.getCount();
+        Assert.assertEquals(5, actual);
     }
+
+
     @Test
     public void testAddCornCropRow() {
-        //  String name = "Froilan";
+
 
         FroilanFarm froilanFarm = new FroilanFarm();
-        Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("Froilan");
+        Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
         CropRow cropRow= new CropRow();
         farmer.plant(CornStalk::new, 5, cropRow);
         froilanFarm.getFarm().getField().add(cropRow);
+
+        int actual = cropRow.getCount();
+        Assert.assertEquals(5, actual);
+
+    }
+
+    @Test
+    public void testAddGenericVegetationCropRow() {
+
+
+        FroilanFarm froilanFarm = new FroilanFarm();
+        Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
+        CropRow cropRow= new CropRow();
+        farmer.plant(GenericVegetation::new, 5, cropRow);
+        froilanFarm.getFarm().getField().add(cropRow);
+
+        int actual = cropRow.getCount();
+        Assert.assertEquals(5, actual);
 
     }
 

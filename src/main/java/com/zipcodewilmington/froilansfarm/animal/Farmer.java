@@ -22,10 +22,16 @@ public class Farmer extends Person implements Rider, Botanist {
 
     public void mount(Rideable rideable) {
 
+
     }
 
     public void dismount(Rideable rideable) {
 
+    }
+
+    @Override
+    public void printRider() {
+        System.out.print("The Rider is : " + getName());
     }
 
     public <T extends Crop> void plant(Supplier<T> cropSupplier, int numberOfCrops, CropRow cropRow) {
