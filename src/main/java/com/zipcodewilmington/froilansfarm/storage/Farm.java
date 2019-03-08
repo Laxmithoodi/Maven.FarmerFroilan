@@ -28,6 +28,7 @@ public class Farm {
 
     public Farm(){
         FarmHouse farmHouse = new FarmHouse();
+        field= new Field();
     }
     public void addChickenCoop(ChickenCoop chickenCoop) {
         chickenCoops.add(chickenCoop);
@@ -72,7 +73,7 @@ public class Farm {
             stables.get(i%numberOfStables).add(animalSupplier.get());
         }
     }
-    public void addFarmerToFarm(Person person) {
+    public void addFarmerToFarmHouse(Person person) {
          farmHouse.add(person);
     }
 

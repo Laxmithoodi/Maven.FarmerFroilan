@@ -18,6 +18,7 @@ import java.util.List;
 public class PlotTest {
 
     private Plot plot;
+    private FarmHouse farmHouse;
 
     @Before
     public void setUp() throws Exception {
@@ -27,7 +28,7 @@ public class PlotTest {
 
     @Test
     public void testMonday() {
-        Farmer frolianda =  plot.getFroilanda();
+        Farmer frolianda =  plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
         CropDuster cropDuster = new CropDuster(); //get ...
         cropDuster.fly();
         Field field = new Field(); //
@@ -43,6 +44,7 @@ public class PlotTest {
 
     private void morningRoutines() {
         List<Person> farmers = plot.getFarm().getFarmHouse().getItems();
+        farmHouse = new FarmHouse();
         farmers.forEach(person -> {
             if(person instanceof Farmer) {
                 for (Horse horse : plot.getFarm().getHorses()) {
@@ -51,21 +53,24 @@ public class PlotTest {
                 }
             }
         });
+
         plot.getFarm().getHorses().forEach(horse -> horse.eat(new EarCorn()));
 
         getFroilanFarmer().eat(new EarCorn());
-        plot.getFroilan().eat(new Tomato());
-        plot.getFroilan().eat(new Tomato());
+//        plot.getFarmHouse().getFarmer(f)
+          getFroilanFarmer().eat(new Tomato());
+//        plot.getFroilan().eat(new Tomato());
         for(int i = 0; i < 5; ++i) {
-            plot.getFroilan().eat(new EdibleEgg());
+            getFroilanFarmer().eat(new EdibleEgg());
         }
+
 
         //to continue
 
     }
     Farmer getFroilanFarmer(){
         return (Farmer) plot.getFarm().getFarmHouse().getItems();
-        return plot.getFarm().addFarmerToFarm("froilan");
+
 
     }
 
