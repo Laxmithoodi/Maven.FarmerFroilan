@@ -57,7 +57,7 @@ public class Farm {
             addChickenCoop(chickenCoop);
         }
         for (int i = 0; i < numberOfChickens; i++) {
-                chickenCoops.get(i%numberOfCoops).add(animalSupplier.get());
+            chickenCoops.get(i%numberOfCoops).add(animalSupplier.get());
         }
     }
 

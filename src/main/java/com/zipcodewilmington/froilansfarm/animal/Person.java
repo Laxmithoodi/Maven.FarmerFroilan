@@ -17,9 +17,13 @@ public class Person implements NoiseMaker, Eater {
     public void setName(String name) {
         this.name = name;
     }
+
     public Person(String name){
         this.name = name;
+
     }
+
+
 
     public void eat(Edible food) {
 

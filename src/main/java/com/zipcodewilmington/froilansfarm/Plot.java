@@ -12,22 +12,21 @@ import com.zipcodewilmington.froilansfarm.storage.Farm;
 import com.zipcodewilmington.froilansfarm.storage.Stable;
 import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
-
 /**
  * Created by leon on 2/26/18.
  */
-public class FroilanFarm {
+public class Plot {
 
-    private Farm farm;
+    private final Farm farm;
 
     public Farm getFarm() {
         return farm;
     }
 
     //Construct the farm
-    public FroilanFarm() {
-
+    public Plot() {
         farm = new Farm();
+
         //addFieldToFarm(farm);
         addChickenCoopToFarm(farm);
         addStablesToFarm(farm);
@@ -37,19 +36,19 @@ public class FroilanFarm {
     }
 
     private void addVehiclesToFarm(Farm farm) {
-        farm.addVehicles(new CropDuster());
-        farm.addVehicles(new Tractor());
-        farm.addVehicles(new Tractor());
+        this.farm.addVehicles(new CropDuster());
+        this.farm.addVehicles(new Tractor());
+        this.farm.addVehicles(new Tractor());
     }
+
 
     private void addFarmHouseToFarm(Farm farm) {
-        farm.addFarmerToFarmHouse(new Farmer("frolian"));
-        farm.addFarmerToFarmHouse(new Farmer("froilanda"));
+        farm.addFarmerToFarmHouse(new Farmer(FarmerNames.frolian.toString()));
+        farm.addFarmerToFarmHouse(new Farmer(FarmerNames.frolianda.toString()));
     }
 
-    private void addFieldToFarm(Farm farm) {
 
-
+    private void addFieldToFarm() {
         farm.CreateCropRowInField(CornStalk::new, 5);
         farm.CreateCropRowInField(TomatoPlant::new, 5);
         farm.CreateCropRowInField(GenericVegetation::new, 5);
@@ -57,12 +56,12 @@ public class FroilanFarm {
         farm.CreateCropRowInField(GenericVegetation::new, 5);
     }
 
+
     private void addChickenCoopToFarm(Farm farm) {
-        farm.addChickenCoopToFarm(ChickenCoop::new, Chicken::new, 4, 15);
+        this.farm.addChickenCoopToFarm(ChickenCoop::new, Chicken::new, 4, 15);
     }
 
     private void addStablesToFarm(Farm farm) {
-        farm.addStablesToFarm(Stable::new, Horse::new,3, 10);
+        this.farm.addStablesToFarm(Stable::new, Horse::new,3, 10);
     }
-
 }

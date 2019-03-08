@@ -13,12 +13,12 @@ import org.junit.Test;
 
 
 public class WorkSundayTest {
-    FroilanFarm froilanFarm;
+    Plot froilanFarm;
     Farmer  frolianFarmer;
     Farmer froilandaFarmer;
 
     public WorkSundayTest(){
-        froilanFarm = new FroilanFarm();
+        froilanFarm = new Plot();
         frolianFarmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
 
 
@@ -26,6 +26,7 @@ public class WorkSundayTest {
 
     @Test
     public void testAddTomatoCropRow() {
+        Plot froilanFarm = new Plot();
         Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
         CropRow cropRow= new CropRow();
         farmer.plant(TomatoPlant::new, 5, cropRow);
@@ -39,6 +40,7 @@ public class WorkSundayTest {
     @Test
     public void testAddCornCropRow() {
 
+        Plot froilanFarm = new Plot();
         Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
         CropRow cropRow= new CropRow();
         farmer.plant(CornStalk::new, 5, cropRow);
@@ -51,6 +53,8 @@ public class WorkSundayTest {
 
     @Test
     public void testAddGenericVegetationCropRow() {
+
+        Plot froilanFarm = new Plot();
         Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
         CropRow cropRow= new CropRow();
         farmer.plant(GenericVegetation::new, 5, cropRow);
