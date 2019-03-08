@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 public class Farm {
     Field field;
@@ -28,7 +29,7 @@ public class Farm {
 
     public Farm(){
         FarmHouse farmHouse = new FarmHouse();
-        field= new Field();
+        field = new Field();
     }
     public void addChickenCoop(ChickenCoop chickenCoop) {
         chickenCoops.add(chickenCoop);
@@ -45,7 +46,7 @@ public class Farm {
     public <T extends Crop> void CreateCropRowInField(Supplier<T> cropSupplier, int numberOfCrops) {
         CropRow cropRow = new CropRow();
         cropRow.addCropRow(cropSupplier, numberOfCrops);
-        field.addCropRow(cropRow);
+        field.add(cropRow);
     }
 
     public <H extends ChickenCoop, A extends Chicken>
@@ -105,11 +106,13 @@ public class Farm {
         return farmHouse;
     }
 
-    public List<Horse> getHorses() {
-        List<Horse> horses = new ArrayList<Horse>();
-        for(Stable stable : stables){
-            horses.addAll(stable.getItems());
-        }
-        return horses;
-    }
+//    public List<Horse> getHorses() {
+//        List<Horse> horses =
+//                stables.stream()
+//                        .flatMap(stable -> stable.getItems().stream())
+//                        .collect(Collectors.toList());
+//        return horses;
+//    }
+
+
 }

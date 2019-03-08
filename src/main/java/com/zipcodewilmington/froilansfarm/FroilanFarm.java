@@ -69,16 +69,4 @@ public class FroilanFarm {
         farm.addStablesToFarm(Stable::new, Horse::new,3, 10);
     }
 
-
-    public void rideHorse() {
-        List<Person> farmerList = farm.getFarmHouse().getItems();
-        farmerList.forEach(person -> {
-            if(person instanceof Farmer) {
-                for (Horse horse : farm.getHorses()) {
-                    ((Farmer) person).mount(horse);
-                    ((Farmer) person).dismount(horse);
-                }
-            }
-        });
-    }
 }
