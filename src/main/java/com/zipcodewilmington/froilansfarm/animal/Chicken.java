@@ -13,7 +13,8 @@ public class Chicken implements Animal, Produce {
 
     }
 
-    public void makeNoise() {
+    public String makeNoise() {
+        return "Cluck";
 
     }
 

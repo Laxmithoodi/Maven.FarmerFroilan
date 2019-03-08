@@ -13,7 +13,10 @@ public class CropDuster implements FarmVehicle, Aircraft {
 
     }
 
-    public void makeNoise() {
+    public String makeNoise() {
+        return "horn";
+
+
 
     }
     public void fertilize(CropRow cropRow){
@@ -22,6 +25,7 @@ public class CropDuster implements FarmVehicle, Aircraft {
 
     @Override
     public void fly(Rider rider) {
-
+        rider.printRider();
+        System.out.println("  for Crop Duster!!");
     }
 }
