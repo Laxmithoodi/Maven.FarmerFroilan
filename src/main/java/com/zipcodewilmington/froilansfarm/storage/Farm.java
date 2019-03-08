@@ -121,6 +121,7 @@ public class Farm {
     public Field getField() {
         return field;
     }
+
     public CropDuster getCropDuster(){
 
         Optional<Vehicle> filteredVehicle = vehicles.stream()
@@ -129,5 +130,9 @@ public class Farm {
 
         return (CropDuster)filteredVehicle.orElse(null);
 
+    }
+
+    public List<CropRow> getCropRows(){
+        return field.getItems();
     }
 }

@@ -17,4 +17,9 @@ public class Tractor implements FarmVehicle {
         return " beep!";
 
     }
+
+    @Override
+    public void printRideableObject() {
+        System.out.println( this.getClass().toString());
+    }
 }

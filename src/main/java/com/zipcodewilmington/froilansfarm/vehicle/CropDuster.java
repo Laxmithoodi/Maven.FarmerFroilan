@@ -19,7 +19,9 @@ public class CropDuster implements FarmVehicle, Aircraft {
 
 
     }
+
     public void fertilize(CropRow cropRow){
+        System.out.println(("Fertilising : " + cropRow.toString()));
 
     }
 
@@ -27,5 +29,10 @@ public class CropDuster implements FarmVehicle, Aircraft {
     public void fly(Rider rider) {
         rider.printRider();
         System.out.println("  for Crop Duster!!");
+    }
+
+    @Override
+    public void printRideableObject() {
+        System.out.println( this.getClass().toString());
     }
 }

@@ -13,4 +13,9 @@ public class Horse implements Animal, Rideable {
         return "neigh";
 
     }
+
+    @Override
+    public void printRideableObject() {
+        System.out.println( this.getClass().toString());
+    }
 }
