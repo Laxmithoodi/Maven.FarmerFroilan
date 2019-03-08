@@ -19,18 +19,23 @@ public class PlotTest {
 
     private Plot plot;
     private FarmHouse farmHouse;
+    Farmer  frolianFarmer;
+    Farmer froilandaFarmer;
+
 
     @Before
     public void setUp() throws Exception {
         plot = new Plot();
+        frolianFarmer = plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolian.toString());
+        froilandaFarmer = plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
         morningRoutines();
     }
 
     @Test
     public void testMonday() {
-        Farmer frolianda =  plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
+        froilandaFarmer =  plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
         CropDuster cropDuster = new CropDuster(); //get ...
-        //cropDuster.fly();
+        cropDuster.fly(froilandaFarmer);
         Field field = new Field(); //
         plot.getFarm().getField().getItems().forEach(cropDuster::fertilize);
 
@@ -56,21 +61,15 @@ public class PlotTest {
 
         plot.getFarm().getHorses().forEach(horse -> horse.eat(new EarCorn()));
 
-        getFroilanFarmer().eat(new EarCorn());
-        Farmer frolian =  plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolian.toString());
-          getFroilanFarmer().eat(new Tomato());
+        froilandaFarmer.eat(new EarCorn());
+        frolianFarmer.eat(new Tomato());
         Farmer frolianda =  plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
         for(int i = 0; i < 5; ++i) {
-            getFroilanFarmer().eat(new EdibleEgg());
+            frolianFarmer.eat(new EdibleEgg());
         }
 
 
         //to continue
-
-    }
-    Farmer getFroilanFarmer(){
-        return (Farmer) plot.getFarm().getFarmHouse().getItems();
-
 
     }
 
