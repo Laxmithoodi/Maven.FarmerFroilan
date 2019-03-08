@@ -10,14 +10,17 @@ import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
 import com.zipcodewilmington.froilansfarm.storage.field.CropRow;
 import com.zipcodewilmington.froilansfarm.storage.field.Field;
+import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicle.interfaces.Aircraft;
 import com.zipcodewilmington.froilansfarm.vehicle.interfaces.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.vehicle.interfaces.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 public class Farm {
     Field field;
@@ -27,9 +30,10 @@ public class Farm {
     List<Vehicle> vehicles = new ArrayList<Vehicle>();
 
     public Farm(){
-        FarmHouse farmHouse = new FarmHouse();
-        field= new Field();
+        farmHouse = new FarmHouse();
+        field = new Field();
     }
+
     public void addChickenCoop(ChickenCoop chickenCoop) {
         chickenCoops.add(chickenCoop);
     }
@@ -45,7 +49,8 @@ public class Farm {
     public <T extends Crop> void CreateCropRowInField(Supplier<T> cropSupplier, int numberOfCrops) {
         CropRow cropRow = new CropRow();
         cropRow.addCropRow(cropSupplier, numberOfCrops);
-        field.addCropRow(cropRow);
+
+        field.add(cropRow);
     }
 
     public <H extends ChickenCoop, A extends Chicken>
@@ -111,5 +116,23 @@ public class Farm {
             horses.addAll(stable.getItems());
         }
         return horses;
+    }
+
+    public Field getField() {
+        return field;
+    }
+
+    public CropDuster getCropDuster(){
+
+        Optional<Vehicle> filteredVehicle = vehicles.stream()
+                .filter(vehicle -> vehicle instanceof CropDuster)
+                .findFirst();
+
+        return (CropDuster)filteredVehicle.orElse(null);
+
+    }
+
+    public List<CropRow> getCropRows(){
+        return field.getItems();
     }
 }

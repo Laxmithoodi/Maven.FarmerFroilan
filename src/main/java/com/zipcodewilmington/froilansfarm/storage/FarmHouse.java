@@ -8,8 +8,8 @@ import java.util.List;
 
 public class FarmHouse extends Storage<Person>{
 
-    public Farmer getFarmer(String name){
 
+    public Farmer getFarmer(String name){
         Farmer farmer = null;
 
         int index = items.indexOf(new Person(name));

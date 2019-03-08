@@ -13,7 +13,13 @@ public class Tractor implements FarmVehicle {
 
     }
 
-    public void makeNoise() {
+    public String makeNoise() {
+        return " beep!";
 
+    }
+
+    @Override
+    public void printRideableObject() {
+        System.out.println( this.getClass().toString());
     }
 }

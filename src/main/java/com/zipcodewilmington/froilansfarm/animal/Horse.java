@@ -9,7 +9,13 @@ public class Horse implements Animal, Rideable {
 
     }
 
-    public void makeNoise() {
+    public String makeNoise() {
+        return "neigh";
 
+    }
+
+    @Override
+    public void printRideableObject() {
+        System.out.println( this.getClass().toString());
     }
 }

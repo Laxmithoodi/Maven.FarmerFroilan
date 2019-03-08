@@ -1,14 +1,7 @@
 package com.zipcodewilmington.froilansfarm.storage.field;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.zipcodewilmington.froilansfarm.storage.Storage;
 
-public class Field {
-    List<CropRow> cropRows = new ArrayList<CropRow>();
-    public void addCropRow(CropRow row){
-        cropRows.add(row);
-    }
-    public List<CropRow> getCropRows(){
-        return cropRows;
-    }
+public class Field extends Storage<CropRow> {
+
 }

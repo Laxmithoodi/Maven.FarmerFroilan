@@ -30,9 +30,9 @@ public class PlotTest {
     public void testMonday() {
         Farmer frolianda =  plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
         CropDuster cropDuster = new CropDuster(); //get ...
-        cropDuster.fly();
+        //cropDuster.fly();
         Field field = new Field(); //
-        field.getCropRows().forEach(cropDuster::fertilize);
+        plot.getFarm().getField().getItems().forEach(cropDuster::fertilize);
 
     }
 
@@ -57,9 +57,9 @@ public class PlotTest {
         plot.getFarm().getHorses().forEach(horse -> horse.eat(new EarCorn()));
 
         getFroilanFarmer().eat(new EarCorn());
-//        plot.getFarmHouse().getFarmer(f)
+        Farmer frolian =  plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolian.toString());
           getFroilanFarmer().eat(new Tomato());
-//        plot.getFroilan().eat(new Tomato());
+        Farmer frolianda =  plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
         for(int i = 0; i < 5; ++i) {
             getFroilanFarmer().eat(new EdibleEgg());
         }
