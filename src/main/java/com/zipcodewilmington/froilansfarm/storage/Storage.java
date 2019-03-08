@@ -14,6 +14,7 @@ public class Storage<T> {
     public List< T> getItems() {
         return items;
     }
+
     public int getCount() {
         return items.size();
     }
