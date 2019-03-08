@@ -6,7 +6,6 @@ import com.zipcodewilmington.froilansfarm.animal.interfaces.Botanist;
 import com.zipcodewilmington.froilansfarm.animal.interfaces.Rider;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
-import com.zipcodewilmington.froilansfarm.storage.Farm;
 
 import java.util.function.Supplier;
 

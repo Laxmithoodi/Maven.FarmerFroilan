@@ -5,6 +5,23 @@ import com.zipcodewilmington.froilansfarm.animal.interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
 
 public class Horse implements Animal, Rideable {
+
+
+    boolean hasRidden;
+
+    public boolean isHasRidden() {
+        return hasRidden;
+    }
+
+    @Override
+    public boolean hasRidden() {
+        return hasRidden;
+    }
+
+    public void setHasRidden(boolean hasRidden) {
+        this.hasRidden = hasRidden;
+    }
+
     public void eat(Edible food) {
 
     }

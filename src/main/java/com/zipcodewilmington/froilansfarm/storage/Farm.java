@@ -1,26 +1,20 @@
 package com.zipcodewilmington.froilansfarm.storage;
 
 import com.zipcodewilmington.froilansfarm.animal.Chicken;
-import com.zipcodewilmington.froilansfarm.animal.Farmer;
 import com.zipcodewilmington.froilansfarm.animal.Horse;
 import com.zipcodewilmington.froilansfarm.animal.Person;
-import com.zipcodewilmington.froilansfarm.animal.interfaces.Animal;
-import com.zipcodewilmington.froilansfarm.crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
-import com.zipcodewilmington.froilansfarm.edible.Edible;
 import com.zipcodewilmington.froilansfarm.storage.field.CropRow;
 import com.zipcodewilmington.froilansfarm.storage.field.Field;
 import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicle.interfaces.Aircraft;
-import com.zipcodewilmington.froilansfarm.vehicle.interfaces.FarmVehicle;
+import com.zipcodewilmington.froilansfarm.vehicle.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.vehicle.interfaces.Vehicle;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Consumer;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 public class Farm {
     Field field;
@@ -30,7 +24,7 @@ public class Farm {
     List<Vehicle> vehicles = new ArrayList<Vehicle>();
 
     public Farm(){
-        FarmHouse farmHouse = new FarmHouse();
+        farmHouse = new FarmHouse();
         field = new Field();
     }
 
