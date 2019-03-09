@@ -1,9 +1,9 @@
 package com.zipcodewilmington.froilansfarm;
 
 
-import com.zipcodewilmington.froilansfarm.animal.Chicken;
-import com.zipcodewilmington.froilansfarm.animal.Farmer;
-import com.zipcodewilmington.froilansfarm.animal.Horse;
+import com.zipcodewilmington.froilansfarm.mammal.Chicken;
+import com.zipcodewilmington.froilansfarm.mammal.Farmer;
+import com.zipcodewilmington.froilansfarm.mammal.Horse;
 import com.zipcodewilmington.froilansfarm.crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.crop.GenericVegetation;
 import com.zipcodewilmington.froilansfarm.crop.TomatoPlant;

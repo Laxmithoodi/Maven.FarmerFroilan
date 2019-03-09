@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm.animal.interfaces;
+package com.zipcodewilmington.froilansfarm.mammal.interfaces;
 
 public interface Rider {
     public void mount(Rideable rideable);

@@ -1,7 +1,7 @@
 package com.zipcodewilmington.froilansfarm.storage;
 
-import com.zipcodewilmington.froilansfarm.animal.Farmer;
-import com.zipcodewilmington.froilansfarm.animal.Person;
+import com.zipcodewilmington.froilansfarm.mammal.Farmer;
+import com.zipcodewilmington.froilansfarm.mammal.Person;
 
 public class FarmHouse extends Storage<Person>{
 

@@ -1,8 +1,8 @@
 package com.zipcodewilmington.froilansfarm.storage;
 
-import com.zipcodewilmington.froilansfarm.animal.Chicken;
-import com.zipcodewilmington.froilansfarm.animal.Horse;
-import com.zipcodewilmington.froilansfarm.animal.Person;
+import com.zipcodewilmington.froilansfarm.mammal.Chicken;
+import com.zipcodewilmington.froilansfarm.mammal.Horse;
+import com.zipcodewilmington.froilansfarm.mammal.Person;
 import com.zipcodewilmington.froilansfarm.crop.CornStalk;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.crop.GenericVegetation;
@@ -13,8 +13,6 @@ import com.zipcodewilmington.froilansfarm.storage.field.CropRow;
 import com.zipcodewilmington.froilansfarm.storage.field.Field;
 import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
-import com.zipcodewilmington.froilansfarm.vehicle.interfaces.Aircraft;
-import com.zipcodewilmington.froilansfarm.vehicle.FarmVehicle;
 import com.zipcodewilmington.froilansfarm.vehicle.interfaces.Vehicle;
 
 import java.util.ArrayList;

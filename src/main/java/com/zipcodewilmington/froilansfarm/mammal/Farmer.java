@@ -1,9 +1,9 @@
-package com.zipcodewilmington.froilansfarm.animal;
+package com.zipcodewilmington.froilansfarm.mammal;
 
 import com.zipcodewilmington.froilansfarm.storage.field.CropRow;
-import com.zipcodewilmington.froilansfarm.animal.interfaces.Rideable;
-import com.zipcodewilmington.froilansfarm.animal.interfaces.Botanist;
-import com.zipcodewilmington.froilansfarm.animal.interfaces.Rider;
+import com.zipcodewilmington.froilansfarm.mammal.interfaces.Rideable;
+import com.zipcodewilmington.froilansfarm.mammal.interfaces.Botanist;
+import com.zipcodewilmington.froilansfarm.mammal.interfaces.Rider;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
 

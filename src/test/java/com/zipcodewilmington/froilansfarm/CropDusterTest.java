@@ -2,15 +2,13 @@ package com.zipcodewilmington.froilansfarm;
 
 
 import com.sun.scenario.effect.Crop;
-import com.zipcodewilmington.froilansfarm.animal.Chicken;
-import com.zipcodewilmington.froilansfarm.animal.Farmer;
+import com.zipcodewilmington.froilansfarm.mammal.Farmer;
 import com.zipcodewilmington.froilansfarm.storage.field.CropRow;
 import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CropDusterTest {
 

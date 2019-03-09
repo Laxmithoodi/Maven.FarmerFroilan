@@ -1,8 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
-import com.zipcodewilmington.froilansfarm.animal.Farmer;
-import com.zipcodewilmington.froilansfarm.animal.Horse;
-import com.zipcodewilmington.froilansfarm.animal.Person;
+import com.zipcodewilmington.froilansfarm.mammal.Farmer;
+import com.zipcodewilmington.froilansfarm.mammal.Horse;
+import com.zipcodewilmington.froilansfarm.mammal.Person;
 import org.junit.Test;
 
 import java.util.List;

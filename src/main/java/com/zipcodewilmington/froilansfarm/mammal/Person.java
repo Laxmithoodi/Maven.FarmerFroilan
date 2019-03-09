@@ -1,7 +1,7 @@
-package com.zipcodewilmington.froilansfarm.animal;
+package com.zipcodewilmington.froilansfarm.mammal;
 
-import com.zipcodewilmington.froilansfarm.animal.interfaces.NoiseMaker;
-import com.zipcodewilmington.froilansfarm.animal.interfaces.Eater;
+import com.zipcodewilmington.froilansfarm.mammal.interfaces.NoiseMaker;
+import com.zipcodewilmington.froilansfarm.mammal.interfaces.Eater;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
 
 import java.util.Objects;

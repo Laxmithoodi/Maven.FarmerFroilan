@@ -1,4 +1,4 @@
-package com.zipcodewilmington.froilansfarm.animal.interfaces;
+package com.zipcodewilmington.froilansfarm.mammal.interfaces;
 
 
 import com.zipcodewilmington.froilansfarm.storage.field.CropRow;

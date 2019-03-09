@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm.crop;
 
-import com.zipcodewilmington.froilansfarm.animal.interfaces.Produce;
+import com.zipcodewilmington.froilansfarm.mammal.interfaces.Produce;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
 
 import java.util.function.Supplier;

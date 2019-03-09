@@ -1,7 +1,7 @@
-package com.zipcodewilmington.froilansfarm.animal;
+package com.zipcodewilmington.froilansfarm.mammal;
 
-import com.zipcodewilmington.froilansfarm.animal.interfaces.Animal;
-import com.zipcodewilmington.froilansfarm.animal.interfaces.Rideable;
+import com.zipcodewilmington.froilansfarm.mammal.interfaces.Animal;
+import com.zipcodewilmington.froilansfarm.mammal.interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
 
 import java.util.ArrayList;
