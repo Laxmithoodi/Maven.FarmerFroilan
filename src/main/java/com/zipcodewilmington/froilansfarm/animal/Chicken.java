@@ -7,7 +7,7 @@ import com.zipcodewilmington.froilansfarm.edible.EdibleEgg;
 
 public class Chicken implements Animal, Produce {
 
-    private boolean hasBeenFertilized;
+    private boolean hasBeenFertilized = true;
 
     public void eat(Edible food) {
 
@@ -15,11 +15,11 @@ public class Chicken implements Animal, Produce {
 
     public String makeNoise() {
         return "Cluck";
-
     }
 
     public Edible yield() {
-        if(!hasBeenFertilized)
+        makeNoise();
+        if(hasBeenFertilized)
             return new EdibleEgg();
         return null;
     }

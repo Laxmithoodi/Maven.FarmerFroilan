@@ -24,7 +24,6 @@ public class Person implements NoiseMaker, Eater {
     }
 
 
-
     public void eat(Edible food) {
 
     }

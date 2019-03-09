@@ -28,49 +28,6 @@ public class PlotTest {
         plot = new Plot();
         frolianFarmer = plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolian.toString());
         froilandaFarmer = plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
-        morningRoutines();
-    }
-
-    @Test
-    public void testMonday() {
-        froilandaFarmer =  plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
-        CropDuster cropDuster = new CropDuster(); //get ...
-        cropDuster.fly(froilandaFarmer);
-        Field field = new Field(); //
-        plot.getFarm().getField().getItems().forEach(cropDuster::fertilize);
-
-    }
-
-    @Test
-    public void testTuesday() {
-
-    }
-
-
-    private void morningRoutines() {
-        List<Person> farmers = plot.getFarm().getFarmHouse().getItems();
-        farmHouse = new FarmHouse();
-        farmers.forEach(person -> {
-            if(person instanceof Farmer) {
-                for (Horse horse : plot.getFarm().getHorses()) {
-                    ((Farmer) person).mount(horse);
-                    ((Farmer) person).dismount(horse);
-                }
-            }
-        });
-
-        plot.getFarm().getHorses().forEach(horse -> horse.eat(new EarCorn()));
-
-        froilandaFarmer.eat(new EarCorn());
-        frolianFarmer.eat(new Tomato());
-        Farmer frolianda =  plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
-        for(int i = 0; i < 5; ++i) {
-            frolianFarmer.eat(new EdibleEgg());
-        }
-
-
-        //to continue
-
     }
 
 }

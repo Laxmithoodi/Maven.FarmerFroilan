@@ -27,41 +27,42 @@ public class Plot {
     public Plot() {
         farm = new Farm();
 
-        //addFieldToFarm(farm);
-        addChickenCoopToFarm(farm);
-        addStablesToFarm(farm);
-        addVehiclesToFarm(farm);
-        addFarmHouseToFarm(farm);
+        addFieldToFarm();
+        addChickenCoopToFarm();
+        addStablesToFarm();
+        addVehiclesToFarm();
+        addFarmHouseToFarm();
+        farm.harvest();
 
     }
 
-    private void addVehiclesToFarm(Farm farm) {
+    private void addVehiclesToFarm() {
         this.farm.addVehicles(new CropDuster());
         this.farm.addVehicles(new Tractor());
         this.farm.addVehicles(new Tractor());
     }
 
 
-    private void addFarmHouseToFarm(Farm farm) {
+    private void addFarmHouseToFarm() {
         farm.addFarmerToFarmHouse(new Farmer(FarmerNames.frolian.toString()));
         farm.addFarmerToFarmHouse(new Farmer(FarmerNames.frolianda.toString()));
     }
 
 
     private void addFieldToFarm() {
-        farm.CreateCropRowInField(CornStalk::new, 5);
-        farm.CreateCropRowInField(TomatoPlant::new, 5);
-        farm.CreateCropRowInField(GenericVegetation::new, 5);
-        farm.CreateCropRowInField(GenericVegetation::new, 5);
-        farm.CreateCropRowInField(GenericVegetation::new, 5);
+        farm.CreateCropRowInField(CornStalk::new, 100);
+        farm.CreateCropRowInField(TomatoPlant::new, 50);
+        farm.CreateCropRowInField(GenericVegetation::new, 15);
+        farm.CreateCropRowInField(GenericVegetation::new, 15);
+        farm.CreateCropRowInField(GenericVegetation::new, 15);
     }
 
 
-    private void addChickenCoopToFarm(Farm farm) {
+    private void addChickenCoopToFarm() {
         this.farm.addChickenCoopToFarm(ChickenCoop::new, Chicken::new, 4, 15);
     }
 
-    private void addStablesToFarm(Farm farm) {
+    private void addStablesToFarm() {
         this.farm.addStablesToFarm(Stable::new, Horse::new,3, 10);
     }
 }

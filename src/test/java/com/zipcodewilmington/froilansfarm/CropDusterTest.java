@@ -27,19 +27,14 @@ public class CropDusterTest {
     }
 
 
-
     @Test
-
     public void testNoise(){
-
         String expected = "horn";
         String actual = cropduster.makeNoise();
 
-      Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
 
     }
-
-
 
     @Test
     public void testCropDuster() {

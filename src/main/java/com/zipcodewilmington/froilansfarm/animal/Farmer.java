@@ -20,8 +20,9 @@ public class Farmer extends Person implements Rider, Botanist {
     }
 
     public void mount(Rideable rideable) {
-
-
+        rideable.setHasRidden(true);
+        rideable.printRideableObject();
+        makeNoise();
     }
 
     public void dismount(Rideable rideable) {
