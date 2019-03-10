@@ -1,7 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
 
-import com.sun.scenario.effect.Crop;
+
+import com.zipcodewilmington.froilansfarm.crop.Crop;
 import com.zipcodewilmington.froilansfarm.mammal.Farmer;
 import com.zipcodewilmington.froilansfarm.storage.field.CropRow;
 import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
