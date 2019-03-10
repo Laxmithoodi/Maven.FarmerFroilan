@@ -34,7 +34,7 @@ public class Plot {
         addStablesToFarm();
         addVehiclesToFarm();
         addFarmHouseToFarm();
-        farm.harvest();
+
 
     }
 

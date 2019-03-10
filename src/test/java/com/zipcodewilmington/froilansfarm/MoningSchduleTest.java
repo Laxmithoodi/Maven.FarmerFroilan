@@ -25,6 +25,7 @@ public class MoningSchduleTest {
     @Before
     public void setUp() {
         plot = new Plot();
+        plot.getFarm().harvest();
         frolianFarmer = plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolian.toString());
         froilandaFarmer = plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
     }

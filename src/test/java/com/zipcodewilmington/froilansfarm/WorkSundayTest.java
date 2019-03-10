@@ -31,11 +31,11 @@ public class WorkSundayTest {
         Plot froilanFarm = new Plot();
         Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
         CropRow cropRow= new CropRow();
-        farmer.plant(TomatoPlant::new, 5, cropRow);
+        farmer.plant(TomatoPlant::new, 50, cropRow);
         froilanFarm.getFarm().getField().add(cropRow);
 
         int actual = cropRow.getCount();
-        Assert.assertEquals(5, actual);
+        Assert.assertEquals(50, actual);
     }
 
 
@@ -45,11 +45,11 @@ public class WorkSundayTest {
         Plot froilanFarm = new Plot();
         Farmer  farmer = froilanFarm.getFarm().getFarmHouse().getFarmer("frolian");
         CropRow cropRow= new CropRow();
-        farmer.plant(CornStalk::new, 5, cropRow);
+        farmer.plant(CornStalk::new, 55, cropRow);
         froilanFarm.getFarm().getField().add(cropRow);
 
         int actual = cropRow.getCount();
-        Assert.assertEquals(5, actual);
+        Assert.assertEquals(55, actual);
 
     }
 
