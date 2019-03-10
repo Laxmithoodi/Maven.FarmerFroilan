@@ -18,7 +18,7 @@ public class CropRow  extends Storage<Crop> {
         String cropStr = "";
         Crop crop = getItems().get(0);
         if(crop != null){
-            cropStr = crop.getClass().toString();
+            cropStr = crop.getClass().getSimpleName();
         }
         return "A row of " + cropStr;
     }

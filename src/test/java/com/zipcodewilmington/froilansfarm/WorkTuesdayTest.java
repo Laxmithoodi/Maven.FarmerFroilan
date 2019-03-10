@@ -27,4 +27,4 @@ public class WorkTuesdayTest {
         Assert.assertEquals(newNumber, 195);
     }
 
-    }
+}

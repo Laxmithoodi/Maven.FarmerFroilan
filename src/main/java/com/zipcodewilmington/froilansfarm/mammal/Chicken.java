@@ -5,12 +5,17 @@ import com.zipcodewilmington.froilansfarm.mammal.interfaces.Produce;
 import com.zipcodewilmington.froilansfarm.edible.Edible;
 import com.zipcodewilmington.froilansfarm.edible.EdibleEgg;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Chicken implements Animal, Produce {
 
     private boolean hasBeenFertilized = true;
+    List<Edible> foodTaken = new ArrayList<>();
+
 
     public void eat(Edible food) {
-
+        foodTaken.add(food);
     }
 
     public String makeNoise() {
@@ -24,11 +29,7 @@ public class Chicken implements Animal, Produce {
         return null;
     }
 
-    public boolean isHasBeenFertilized() {
-        return hasBeenFertilized;
-    }
-
-    public void setHasBeenFertilized(boolean hasBeenFertilized) {
-        this.hasBeenFertilized = hasBeenFertilized;
+    public int numberOfFoodTaken() {
+        return foodTaken.size();
     }
 }

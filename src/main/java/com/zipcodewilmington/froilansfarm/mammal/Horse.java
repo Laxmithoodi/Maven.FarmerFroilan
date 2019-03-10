@@ -36,7 +36,6 @@ public class Horse implements Animal, Rideable {
 
     public void eat(Edible food) {
         foodTaken.add(food);
-
     }
 
     public String makeNoise() {
@@ -44,7 +43,7 @@ public class Horse implements Animal, Rideable {
     }
 
     @Override
-    public void printRideableObject() {
-        System.out.println( this.getClass().toString());
+    public String toString() {
+        return this.getClass().getSimpleName();
     }
 }

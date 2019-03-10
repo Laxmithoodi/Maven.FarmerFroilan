@@ -26,8 +26,8 @@ public abstract class FarmVehicle implements Vehicle {
     }
 
     @Override
-    public void printRideableObject() {
-        System.out.println( this.getClass().toString());
+    public String toString() {
+        return  this.getClass().getSimpleName();
     }
 
 }

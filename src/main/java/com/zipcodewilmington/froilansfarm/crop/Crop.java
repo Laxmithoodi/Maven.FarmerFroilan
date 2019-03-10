@@ -7,7 +7,7 @@ import java.util.function.Supplier;
 
 public abstract class Crop<T extends Edible> implements Produce {
 
-    private boolean hasBeenFertilized;
+    private boolean hasBeenFertilized = false;
     Supplier<T> edibleSupplier;
 
     public boolean isHasBeenFertilized() {

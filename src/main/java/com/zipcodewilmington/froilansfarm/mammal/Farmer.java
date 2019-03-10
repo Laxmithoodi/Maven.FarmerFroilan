@@ -19,7 +19,7 @@ public class Farmer extends Person implements Rider, Botanist {
 
     public void mount(Rideable rideable) {
         rideable.setHasRidden(true);
-        rideable.printRideableObject();
+        System.out.println(getName() + " mounted : " + rideable.toString()  );
         if(rideable instanceof NoiseMaker)
             ((NoiseMaker)rideable).makeNoise();
         makeNoise();

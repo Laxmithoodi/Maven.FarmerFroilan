@@ -40,8 +40,8 @@ public class CropDusterTest {
         List<CropRow> cropRows = froilanFarm.getFarm().getCropRows();
         CropDuster cropDuster = froilanFarm.getFarm().getCropDuster();
 
-        frolianFarmer.mount(cropDuster);
-        cropDuster.fly(frolianFarmer);
+        froilandaFarmer.mount(cropDuster);
+        cropDuster.fly(froilandaFarmer);
         int expected = 5;
 
         for (CropRow row : cropRows) {
