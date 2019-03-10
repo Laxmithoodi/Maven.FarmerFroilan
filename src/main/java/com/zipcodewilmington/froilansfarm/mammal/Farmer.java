@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm.mammal;
 
+import com.zipcodewilmington.froilansfarm.mammal.interfaces.NoiseMaker;
 import com.zipcodewilmington.froilansfarm.storage.field.CropRow;
 import com.zipcodewilmington.froilansfarm.mammal.interfaces.Rideable;
 import com.zipcodewilmington.froilansfarm.mammal.interfaces.Botanist;
@@ -15,13 +16,12 @@ public class Farmer extends Person implements Rider, Botanist {
         super(name);
     }
 
-    public void eat(Edible food) {
-
-    }
 
     public void mount(Rideable rideable) {
         rideable.setHasRidden(true);
         rideable.printRideableObject();
+        if(rideable instanceof NoiseMaker)
+            ((NoiseMaker)rideable).makeNoise();
         makeNoise();
     }
 

@@ -24,7 +24,7 @@ public abstract class Crop<T extends Edible> implements Produce {
 
     public Edible yield() {
         Edible edible = null;
-        if( hasBeenFertilized){
+        if(hasBeenFertilized){
             edible =  (Edible) edibleSupplier.get();
         }
         return edible;

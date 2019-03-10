@@ -15,6 +15,9 @@ public class Tractor extends FarmVehicle {
 
     List<Crop> harvestedCrops = new ArrayList<>();
 
+    public int getNumberOfHarvestedItems(){
+        return harvestedCrops.size();
+    }
     public void harverst(Crop crop){
         harvestedCrops.add(crop);
     }

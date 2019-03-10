@@ -42,10 +42,6 @@ public class Farm {
         vehicles.add(vehicle);
     }
 
-    public void setFarmHouse(FarmHouse farmHouse) {
-        this.farmHouse = farmHouse;
-    }
-
     public <T extends Crop> void CreateCropRowInField(Supplier<T> cropSupplier, int numberOfCrops) {
         CropRow cropRow = new CropRow();
         cropRow.addCropRow(cropSupplier, numberOfCrops);
