@@ -23,6 +23,7 @@ public class Farmer extends Person implements Rider, Botanist {
         if(rideable instanceof NoiseMaker)
             ((NoiseMaker)rideable).makeNoise();
         makeNoise();
+        rideable.setHasRidden(true);
     }
 
     public void dismount(Rideable rideable) {

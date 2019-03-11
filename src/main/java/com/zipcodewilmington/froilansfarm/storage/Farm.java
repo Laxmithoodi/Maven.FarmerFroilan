@@ -13,9 +13,11 @@ import com.zipcodewilmington.froilansfarm.storage.field.CropRow;
 import com.zipcodewilmington.froilansfarm.storage.field.Field;
 import com.zipcodewilmington.froilansfarm.vehicle.CropDuster;
 import com.zipcodewilmington.froilansfarm.vehicle.Tractor;
+import com.zipcodewilmington.froilansfarm.vehicle.interfaces.Aircraft;
 import com.zipcodewilmington.froilansfarm.vehicle.interfaces.Vehicle;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Supplier;
@@ -146,5 +148,21 @@ public class Farm {
 
         getChickens().stream()
                 .forEach(chicken -> harvestedEgg.add(chicken.yield()));
+    }
+
+    public void fertilise(){
+        CropDuster cropDuster = getCropDuster();
+        cropDuster.operate(this);
+    }
+
+    public List<Vehicle> getVehicles(){
+        return vehicles;
+    }
+
+    public List<Vehicle> getAircrafts() {
+        return vehicles.stream()
+                .filter(vehicle -> vehicle instanceof Tractor)
+                .collect(Collectors.toList());
+
     }
 }

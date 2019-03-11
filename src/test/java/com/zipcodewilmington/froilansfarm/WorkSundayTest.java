@@ -21,9 +21,6 @@ public class WorkSundayTest {
         froilanFarm = new Plot();
         frolianFarmer = froilanFarm.getFarm().getFarmHouse().getFarmer(FarmerNames.frolian.toString());
         froilandaFarmer = froilanFarm.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
-
-
-
     }
 
     @Test

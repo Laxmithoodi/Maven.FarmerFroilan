@@ -21,10 +21,6 @@ public class Horse implements Animal, Rideable {
         return foodTaken.size();
     }
 
-    public boolean isHasRidden() {
-        return hasRidden;
-    }
-
     @Override
     public boolean hasRidden() {
         return hasRidden;

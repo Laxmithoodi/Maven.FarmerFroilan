@@ -19,12 +19,13 @@ public class WorkTuesdayTest {
     public void testHarvest() {
         Tractor tractor = froilanFarm.getFarm().getTractor();
         frolianFarmer.mount(tractor);
-        Field field = froilanFarm.getFarm().getField();
-        field.getItems().forEach(cropRow -> cropRow.getItems()
-                .forEach(tractor::harverst));
+        long expected = froilanFarm.getFarm().getCropRows().stream()
+                .flatMap(coop -> coop.getItems().stream()).count();
 
+        tractor.operate(froilanFarm.getFarm());
         int newNumber = tractor.getNumberOfHarvestedItems();
-        Assert.assertEquals(newNumber, 195);
+        Assert.assertEquals(newNumber, expected);
+        Assert.assertTrue(tractor.hasRidden());
     }
 
 }

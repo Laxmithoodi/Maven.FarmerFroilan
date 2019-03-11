@@ -24,9 +24,10 @@ public class Chicken implements Animal, Produce {
 
     public Edible yield() {
         makeNoise();
+        Edible edible = null;
         if(hasBeenFertilized)
-            return new EdibleEgg();
-        return null;
+            edible =  new EdibleEgg();
+        return edible;
     }
 
     public int numberOfFoodTaken() {
