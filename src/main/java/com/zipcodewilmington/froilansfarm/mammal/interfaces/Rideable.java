@@ -6,5 +6,5 @@ public interface Rideable {
 
     public void setHasRidden(boolean hasRidden) ;
 
-    public void printRideableObject();
+    public String toString();
 }

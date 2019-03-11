@@ -41,7 +41,6 @@ public class Plot {
     private void addVehiclesToFarm() {
         this.farm.addVehicles(new CropDuster());
         this.farm.addVehicles(new Tractor());
-        this.farm.addVehicles(new Tractor());
     }
 
 

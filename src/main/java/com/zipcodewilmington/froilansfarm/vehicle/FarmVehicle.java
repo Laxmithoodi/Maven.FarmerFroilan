@@ -11,10 +11,6 @@ public abstract class FarmVehicle implements Vehicle {
         this.operated = true;
     }
 
-    public boolean isOperated() {
-        return operated;
-    }
-
     @Override
     public boolean hasRidden() {
         return hasRidden;
@@ -26,8 +22,8 @@ public abstract class FarmVehicle implements Vehicle {
     }
 
     @Override
-    public void printRideableObject() {
-        System.out.println( this.getClass().toString());
+    public String toString() {
+        return  this.getClass().getSimpleName();
     }
 
 }

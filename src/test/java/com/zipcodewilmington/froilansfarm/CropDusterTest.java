@@ -37,17 +37,13 @@ public class CropDusterTest {
 
     @Test
     public void testCropDuster() {
-
-        List<CropRow> cropRows = froilanFarm.getFarm().getCropRows();
         CropDuster cropDuster = froilanFarm.getFarm().getCropDuster();
-
-        frolianFarmer.mount(cropDuster);
-        cropDuster.fly(frolianFarmer);
+        froilandaFarmer.mount(cropDuster);
+        cropDuster.fly(froilandaFarmer);
         int expected = 5;
 
-        for (CropRow row : cropRows) {
-            cropDuster.fertilize(row);
-        }
+        cropDuster.operate(froilanFarm.getFarm());
+        List<CropRow> cropRows = froilanFarm.getFarm().getCropRows();
 
         for (CropRow cropRow : cropRows) {
             Crop[] crops = cropRow.getItems().stream()

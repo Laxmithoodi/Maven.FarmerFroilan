@@ -6,6 +6,7 @@ import com.zipcodewilmington.froilansfarm.crop.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.edible.EarCorn;
 import com.zipcodewilmington.froilansfarm.storage.Farm;
 import com.zipcodewilmington.froilansfarm.crop.Crop;
+import com.zipcodewilmington.froilansfarm.storage.field.Field;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,16 @@ public class Tractor extends FarmVehicle {
     }
     public void harverst(Crop crop){
         harvestedCrops.add(crop);
+    }
+
+    @Override
+    public void operate(Farm farm) {
+        super.operate(farm);
+        Field field = farm.getField();
+
+        field.getItems().forEach(cropRow -> cropRow.getItems()
+                .forEach(this::harverst));
+
     }
 
     public String makeNoise() {

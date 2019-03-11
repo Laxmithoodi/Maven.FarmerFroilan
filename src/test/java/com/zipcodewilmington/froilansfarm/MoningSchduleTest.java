@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
 
+import com.zipcodewilmington.froilansfarm.mammal.Chicken;
 import com.zipcodewilmington.froilansfarm.mammal.Farmer;
 import com.zipcodewilmington.froilansfarm.mammal.Horse;
 import com.zipcodewilmington.froilansfarm.mammal.Person;
@@ -25,6 +26,7 @@ public class MoningSchduleTest {
     @Before
     public void setUp() {
         plot = new Plot();
+        plot.getFarm().fertilise();
         plot.getFarm().harvest();
         frolianFarmer = plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolian.toString());
         froilandaFarmer = plot.getFarm().getFarmHouse().getFarmer(FarmerNames.frolianda.toString());
@@ -43,15 +45,23 @@ public class MoningSchduleTest {
 
         feedChicken();
         checkAllChickensAte();
+
         haveBreakfast();
         checkIfFarmersHadBreakfast();
     }
 
     private void checkAllChickensAte() {
+        List<Chicken> chickensThatDidNotEat = plot.getFarm().getChickens().stream()
+                .filter(chicken->chicken.numberOfFoodTaken() == 0)
+                .collect(Collectors.toList());
 
+        Assert.assertEquals(chickensThatDidNotEat.size(), 0);
     }
 
     private void checkIfFarmersHadBreakfast() {
+        Assert.assertNotEquals(froilandaFarmer.numberOfFoodTaken(), 0);
+        Assert.assertNotEquals(frolianFarmer.numberOfFoodTaken(), 0);
+
     }
 
     private void rideHorse(){
